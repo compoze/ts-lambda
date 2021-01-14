@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./deploy",
+    "module": "CommonJS",
+    "target": "ES2017",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "preserveConstEnums": true
+  },
+  "include": [
+    "node_modules"
+  ]
+
+  //  "exclude": [
+//    "node_modules"
+//  ]
+}
