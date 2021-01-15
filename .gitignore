@@ -129,6 +129,3 @@ $RECYCLE.BIN/
 # IDE 
 .vscode
 .idea
-
-# Build
-samconfig.toml
