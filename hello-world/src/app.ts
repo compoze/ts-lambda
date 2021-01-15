@@ -1,15 +1,14 @@
 import { APIGatewayProxyEvent, APIGatewayProxyResult } from "aws-lambda";
 
-import * as dotenv from "dotenv";
+// import * as moment from 'moment'; //  OK
 
 export const lambdaHandler = async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
 
-  dotenv.config();
-
-  const hw: string = process.env.HELLO;
+  // const hw: string = process.env.HELLO;
+  // const then: string = moment("2020-12-31").fromNow();
 
   return {
     statusCode: 200,
-    body: `TESTING ENV VARIABLE LOCAL AND IN AWS ${hw}`,
+    body: `HELLO WORLD`,
   };
 };

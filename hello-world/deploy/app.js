@@ -1,13 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.lambdaHandler = void 0;
-const dotenv = require("dotenv");
+// import * as moment from 'moment'; //  OK
 const lambdaHandler = async (event) => {
-    dotenv.config();
-    const hw = process.env.HELLO;
+    // const hw: string = process.env.HELLO;
+    // const then: string = moment("2020-12-31").fromNow();
     return {
         statusCode: 200,
-        body: `TESTING ENV VARIABLE LOCAL AND IN AWS ${hw}`,
+        body: `HELLO WORLD`,
     };
 };
 exports.lambdaHandler = lambdaHandler;
