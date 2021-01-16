@@ -17,7 +17,7 @@ Resources:
       CodeUri: hello-world/deploy
       Handler: app.lambdaHandler
       Runtime: nodejs12.x
-      Layers:
+      # Layers:
 #        - !Ref arn:aws:lambda:us-east-1:270196509532:layer:test-layer:6
       Events:
         HelloWorld:

@@ -6,6 +6,9 @@
   "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-hello-nodejs",
   "author": "SAM CLI",
   "license": "MIT",
+  "config": {
+    "projectName": "myapp"
+  },
   "dependencies": {
     "moment": "^2.29.1"
   },
@@ -19,8 +22,8 @@
     "mocha": "^8.2.1"
   },
   "scripts": {
-    "compile": "tsc --build",
-    "deploy": "cd ..; sam deploy",
+    "build": "tsc --build",
+    "deploy": "./scripts/deploy.sh $npm_package_config_projectName",
     "integ-test": "mocha tests/integration/",
     "test": "mocha tests/unit/"
   }
