@@ -13,3 +13,4 @@ sam deploy --stack-name ${APP_NAME} \
     --s3-bucket aws-sam-cli-managed-default-samclisourcebucket-xfrzollpo2o5 \
     --capabilities CAPABILITY_IAM \
     --no-fail-on-empty-changeset
+    --region us-east-1
