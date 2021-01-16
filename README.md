@@ -47,7 +47,7 @@ Build path is set in `template.yaml`:
 
 ```toml
     Properties:
-      CodeUri: hello-world/deploy
+      CodeUri: myapp/deploy
 ```
 
 Deployments are done with the AWS SAM tool. To install SAM on macOS run:
