@@ -10,7 +10,7 @@ APP_NAME=$1
 
 sam deploy --stack-name ${APP_NAME} \
     --template "${ROOT_DIR}/template.yaml" \
-    --s3-bucket aws-sam-cli-managed-default-samclisourcebucket-xfrzollpo2o5 \
+    --s3-bucket <compoze-deploy-bucket> \
     --capabilities CAPABILITY_IAM \
     --no-fail-on-empty-changeset \
     --region us-east-1

@@ -1,9 +1,7 @@
 {
   "name": "myapp",
   "version": "1.0.0",
-  "description": "hello world sample for NodeJS",
-  "main": "app.js",
-  "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-hello-nodejs",
+  "description": "NodeJS Typescript Lambda",
   "author": "SAM CLI",
   "license": "MIT",
   "scripts": {
