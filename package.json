@@ -26,6 +26,7 @@
     "build": "./node_modules/.bin/tsc --build",
     "deploy": "./scripts/deploy.sh $npm_package_config_projectName",
     "integ-test": "mocha tests/integration/",
-    "test": "mocha tests/unit/"
+    "test": "mocha tests/unit/",
+    "initialize": "npm ci && npm run build && npm run deploy dev"
   }
 }
