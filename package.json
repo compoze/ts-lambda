@@ -17,7 +17,8 @@
     "initialize": "npm ci && npm run build && npm run deploy dev && npm run deploy stage && npm run deploy prod"
   },
   "dependencies": {
-    "moment": "^2.29.1"
+    "moment": "^2.29.1",
+    "winston": "^3.3.3"
   },
   "devDependencies": {
     "@types/aws-lambda": "^8.10.70",
