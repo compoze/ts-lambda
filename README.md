@@ -1,11 +1,11 @@
-# ts-lambda-template
+# myapp-template
 
 Generated with `sam init`:
 
 - AWS Quick Start Template
 - Zip
 - nodejs12.x
-- ts-lambda-template
+- myapp-template
 
 ## Setup
 
