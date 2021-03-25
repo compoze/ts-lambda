@@ -17,8 +17,6 @@ Resources:
       CodeUri: deploy
       Handler: app.lambdaHandler
       Runtime: nodejs12.x
-      # Layers:
-#        - !Ref arn:aws:lambda:us-east-1:270196509532:layer:test-layer:6
       Events:
         HelloWorld:
           Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
