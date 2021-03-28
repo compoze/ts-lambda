@@ -7,9 +7,15 @@ PROJECT_DIR="$SCRIPT_DIR/.."
 
 ENV=$1
 
-echo "installing dependencies"
-npm ci 
-echo "building app"
-npm run build 
-echo "deploying $ENV"
-npm run deploy $ENV
+if [[ -z "${ENV}" ]]; then
+    echo "no environment provided"
+    exit 1
+else
+    echo "installing dependencies"
+    npm ci 
+    echo "building app"
+    npm run build 
+    echo "deploying $ENV"
+    npm run deploy $ENV
+fi
+
