@@ -14,7 +14,7 @@
     "deploy": "./scripts/deploy.sh $npm_package_config_projectName",
     "integ-test": "mocha tests/integration/",
     "test": "jest --config=jest.config.js",
-    "initialize": "npm ci && npm run build && npm run deploy dev && npm run deploy stage && npm run deploy prod"
+    "initialize": "./scripts/init.sh"
   },
   "dependencies": {
     "moment": "^2.29.1",

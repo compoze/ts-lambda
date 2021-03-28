@@ -129,4 +129,4 @@ $RECYCLE.BIN/
 # IDE 
 .vscode
 .idea
-myapp/deploy
+deploy
