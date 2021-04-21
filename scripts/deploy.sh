@@ -8,6 +8,9 @@ PROJECT_DIR="$SCRIPT_DIR/.."
 APP_NAME=$1
 ENV=$2
 
+npm ci
+npm run build
+
 sam deploy --stack-name ${APP_NAME}-${ENV} \
     --template "${PROJECT_DIR}/template.yaml" \
     --s3-bucket <compoze-deploy-bucket> \
