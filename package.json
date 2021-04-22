@@ -10,11 +10,12 @@
     "projectName": "myapp"
   },
   "scripts": {
-    "build": "./node_modules/.bin/tsc --build",
+    "build": "tsc -p tsconfig.build.json",
     "deploy": "./scripts/deploy.sh $npm_package_config_projectName",
     "integ-test": "mocha tests/integration/",
     "test": "jest --config=jest.config.js",
-    "initialize": "./scripts/init.sh"
+    "initialize": "./scripts/init.sh",
+    "postbuild": "cp -r node_modules deploy"
   },
   "dependencies": {
     "moment": "^2.29.1",
