@@ -16,7 +16,7 @@ else
     echo "building app"
     npm run build 
     echo "setting appropriate read permissions" # https://acloud.guru/forums/aws-lambda/discussion/-KSVv58PhKhA1c6a6EZ-/errormessage-eacces-permission-denied-open-vartaskcsvreadjs
-    chmod -R 644
+    chmod -R 644 deploy
     echo "deploying $ENV"
     npm run deploy $ENV
 fi
