@@ -12,7 +12,7 @@ npm ci
 npm run build
 
 echo "setting appropriate read permissions" # https://acloud.guru/forums/aws-lambda/discussion/-KSVv58PhKhA1c6a6EZ-/errormessage-eacces-permission-denied-open-vartaskcsvreadjs
-chmod -R 644 deploy
+chmod -R 744 deploy
 
 sam deploy --stack-name ${APP_NAME}-${ENV} \
     --template "${PROJECT_DIR}/template.yaml" \
