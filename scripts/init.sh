@@ -11,13 +11,6 @@ if [[ -z "${ENV}" ]]; then
     echo "no environment provided"
     exit 1
 else
-    echo "installing dependencies"
-    npm ci 
-    echo "building app"
-    npm run build 
-    echo "setting appropriate read permissions" # https://acloud.guru/forums/aws-lambda/discussion/-KSVv58PhKhA1c6a6EZ-/errormessage-eacces-permission-denied-open-vartaskcsvreadjs
-    chmod -R 644 deploy
-    echo "deploying $ENV"
     npm run deploy $ENV
 fi
 
