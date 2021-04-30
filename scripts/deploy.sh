@@ -22,7 +22,7 @@ get_environment_vars $ENV
 echo $environments 
 sam deploy --stack-name ${APP_NAME}-${ENV} \
     --template "${PROJECT_DIR}/template.yaml" \
-    --s3-bucket myapp.compoze.lambda.bucket \
+    --s3-bucket <compoze-deploy-bucket> \
     --capabilities CAPABILITY_IAM \
     --no-fail-on-empty-changeset \
     --region us-east-1 \
