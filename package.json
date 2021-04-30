@@ -11,12 +11,14 @@
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
+    "compoze:sqs": "compoze lambda.event --queueArn asdf:asdfsd234234 -t sqs",
     "deploy": "./scripts/deploy.sh $npm_package_config_projectName",
     "test": "jest --config=jest.config.js",
     "initialize": "./scripts/init.sh $npm_package_config_projectName",
     "postbuild": "echo \"moving node_modules to deploy\" cp -r node_modules deploy"
   },
   "dependencies": {
+    "@compoze/compoze-framework": "^0.1.0",
     "moment": "^2.29.1",
     "winston": "^3.3.3"
   },
