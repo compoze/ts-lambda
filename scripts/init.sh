@@ -2,6 +2,9 @@
 
 set -eo pipefail
 
+## declare functions
+. ./scripts/init_environment.sh
+
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$SCRIPT_DIR/.."
 
@@ -13,6 +16,7 @@ if [[ -z "${ENV}" ]]; then
     exit 1
 else
     echo "initializing app $APP_NAME $ENV"
-    npm run deploy $APP_NAME $ENV
+    createEnvironmentFile $ENV
+    npm run deploy $ENV
 fi
 
