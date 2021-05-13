@@ -22,7 +22,7 @@
     "precompoze:sqswriter": "npm i"
   },
   "dependencies": {
-    "@compoze/compoze-framework": "^0.5.0",
+    "@compoze/compoze-framework": "^0.6.0",
     "moment": "^2.29.1",
     "winston": "^3.3.3"
   },
