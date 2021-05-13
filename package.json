@@ -17,7 +17,7 @@
     "deploy": "./scripts/deploy.sh $npm_package_config_projectName",
     "test": "jest --config=jest.config.js",
     "initialize": "./scripts/init.sh $npm_package_config_projectName",
-    "postbuild": "echo \"moving node_modules to deploy\" cp -r node_modules deploy",
+    "postbuild": "echo \"moving node_modules to deploy\" && cp -r node_modules deploy",
     "precompoze:sqs": "npm i",
     "precompoze:sqswriter": "npm i"
   },
