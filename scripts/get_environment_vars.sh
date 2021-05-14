@@ -8,7 +8,7 @@ ENVIRONMENTS_DIR="${PROJECT_DIR}/environments"
 get_environment_vars() {
     ENV=$1
     echo "getting environments for $ENV"
-    local environments=""
+    environments=""
     while read p; do
         environments+="$p "
     done <"${ENVIRONMENTS_DIR}/${ENV}.env"
