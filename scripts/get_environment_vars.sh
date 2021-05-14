@@ -13,5 +13,4 @@ get_environment_vars() {
         environments+="$p "
     done <"${ENVIRONMENTS_DIR}/${ENV}.env"
 
-    echo $environments
 }
