@@ -24,7 +24,7 @@
     "precompoze:dynamo": "npm i"
   },
   "dependencies": {
-    "@compoze/compoze-framework": "^0.8.3",
+    "@compoze/compoze-framework": "^0.8.4",
     "moment": "^2.29.1",
     "winston": "^3.3.3"
   },
