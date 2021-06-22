@@ -16,7 +16,7 @@ if [[ -z "${ENV}" ]]; then
     exit 1
 else
     echo "initializing app $APP_NAME $ENV"
-    createEnvironmentFile $ENV
+    npm run compoze:environment -- -n $ENV -e Environment=$ENV
     npm run deploy $ENV
 fi
 

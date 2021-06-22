@@ -15,6 +15,7 @@
     "compoze:sqs": "compoze lambda.listener -t sqs",
     "compoze:sqswriter": "compoze lambda.writer -t sqs",
     "compoze:dynamo": "compoze lambda.dynamodb",
+    "compoze:environment": "compoze environment",
     "deploy": "./scripts/deploy.sh $npm_package_config_projectName",
     "test": "jest --config=jest.config.js",
     "initialize": "./scripts/init.sh $npm_package_config_projectName",
