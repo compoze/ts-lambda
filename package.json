@@ -17,6 +17,7 @@
     "compoze:dynamo": "compoze lambda.dynamodb",
     "compoze:environment": "compoze environment",
     "deploy": "./scripts/deploy.sh $npm_package_config_projectName",
+    "smoke-test": "./scripts/smoke_test.sh $npm_package_config_projectName $npm_package_config_projectNameUrl",
     "test": "jest --config=jest.config.js",
     "initialize": "./scripts/init.sh $npm_package_config_projectName",
     "postbuild": "echo \"moving node_modules to deploy\" && cp -r node_modules deploy",
