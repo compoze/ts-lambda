@@ -47,7 +47,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: npm run compoze:environment -- -n prod -e key=value
-      - run: sed -i '' 's/<compoze-deploy-bucket>/compoze.lambda.ci.test/g' scripts/deploy.sh
+      - run: sed -i -e 's/<compoze-deploy-bucket>/compoze.lambda.ci.test/g' scripts/deploy.sh
       - run: npm run deploy prod
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
