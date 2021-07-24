@@ -1,6 +1,8 @@
 STACK_NAME=$1
-URL_KEY=$2
 
+URL_KEY="myappUrl"
+
+echo "Fetching url for $STACK_NAME for $URL_KEY"
 URL=$(aws cloudformation describe-stacks --stack-name "$STACK_NAME" --query 'Stacks[0].Outputs[?OutputKey==`'${URL_KEY}'`].OutputValue' --output text)
 echo $URL
 
