@@ -15,6 +15,25 @@ Parameters:
     Default: Dev
     
 Resources:
+  
+  ApiGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: !Sub "${AWS::StackName}"
+      StageName: !Sub "${Environment}"
+      Auth:
+        UsagePlan:
+          CreateUsagePlan: PER_API
+          UsagePlanName: !Sub "${AWS::StackName}-${Environment}-UsagePlan"
+          Quota:
+            Limit: 5000
+            Period: DAY
+          Throttle:
+            BurstLimit: 200
+            RateLimit: 100
+          Description: "API Usage Plan"
+      TracingEnabled: true
+
   myappFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
@@ -30,6 +49,8 @@ Resources:
           Properties:
             Path: /hello
             Method: get
+            RestApiId:
+              Ref: ApiGateway
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
   # Find out more about other implicit resources you can reference within SAM

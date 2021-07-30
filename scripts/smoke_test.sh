@@ -10,7 +10,7 @@ RESULT=$(curl -o /dev/null -s -w "%{http_code}\n" ${URL})
 
 echo $RESULT
 
-if [[ "$RESULT" != 200 ]]; then
+if [ "$RESULT" != 200 ]; then
     echo "Call failed $RESULT"
     exit 1
 fi
