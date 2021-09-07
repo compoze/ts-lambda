@@ -13,6 +13,7 @@
     "build": "tsc -p tsconfig.build.json",
     "clean": "rm -rf node_modules",
     "compoze:sqs": "compoze lambda.listener -t sqs",
+    "compoze:http": "compoze lambda.api.http",
     "compoze:sqswriter": "compoze lambda.writer -t sqs",
     "compoze:dynamo": "compoze lambda.dynamodb",
     "compoze:environment": "compoze environment",
