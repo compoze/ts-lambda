@@ -24,6 +24,7 @@
     "postbuild": "echo \"moving node_modules to deploy\" && cp -r node_modules deploy",
     "preinitialize": "npm i",
     "precompoze:sqs": "npm i",
+    "precompoze:http": "npm i",
     "precompoze:sqswriter": "npm i",
     "precompoze:dynamo": "npm i"
   },
