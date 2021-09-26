@@ -15,6 +15,7 @@
     "compoze:sqs": "compoze lambda.listener -t sqs",
     "compoze:http": "compoze lambda.api.http",
     "compoze:sqswriter": "compoze lambda.writer -t sqs",
+    "compoze:eventbridge": "compoze lambda.eventbridge.listener",
     "compoze:dynamo": "compoze lambda.dynamodb",
     "compoze:environment": "compoze environment",
     "deploy": "./scripts/deploy.sh $npm_package_config_projectName",
@@ -26,15 +27,16 @@
     "precompoze:sqs": "npm i",
     "precompoze:http": "npm i",
     "precompoze:sqswriter": "npm i",
+    "precompoze:eventbridge": "npm i",
     "precompoze:dynamo": "npm i"
   },
   "dependencies": {
     "@aws-sdk/client-cloudwatch": "^3.29.0",
-    "@compoze/compoze-framework": "^0.12.0",
     "moment": "^2.29.1",
     "winston": "^3.3.3"
   },
   "devDependencies": {
+    "@compoze/compoze-framework": "^0.12.3",
     "@types/aws-lambda": "^8.10.70",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.20",
