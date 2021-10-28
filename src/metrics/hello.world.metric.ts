@@ -2,7 +2,7 @@ import { MetricPublisher } from "./metrics.client";
 
 class HelloWorldSuccess extends MetricPublisher {
     constructor() {
-        super('OrderRecordSuccess', 'Airfield/Notifications')
+        super('HelloSuccess', 'myapp/Notifications')
     }
 }
 
