@@ -19,6 +19,7 @@ export function getTestEvent(): APIGatewayProxyEvent {
             protocol: "",
             httpMethod: "",
             identity: {
+                clientCert: null,
                 accessKey: null,
                 accountId: null,
                 apiKey: null,
