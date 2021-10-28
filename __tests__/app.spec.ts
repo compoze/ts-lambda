@@ -1,9 +1,8 @@
 // 'use strict';
 
 import { APIGatewayProxyEvent } from 'aws-lambda/trigger/api-gateway-proxy';
-// const app = require('../../src/app.js');
-import { lambdaHandler } from '../../src/app';
-import { getTestEvent } from '../helpers/eventHelpers';
+import { lambdaHandler } from '../src/app';
+import { getTestEvent } from './helpers/eventHelpers';
 
 describe('Tests index', function () {
     const event: APIGatewayProxyEvent = getTestEvent();

@@ -1,9 +1,9 @@
 import { APIGatewayProxyEvent } from "aws-lambda/trigger/api-gateway-proxy";
 
-export function getTestEvent(): APIGatewayProxyEvent {
+export function getTestEvent(headers?: any): APIGatewayProxyEvent {
     return {
         body: "{\"Hello\": \"World\"}",
-        headers: {},
+        headers: headers || {},
         multiValueHeaders: {},
         httpMethod: "",
         isBase64Encoded: true,
