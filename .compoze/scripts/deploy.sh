@@ -3,10 +3,10 @@
 set -eo pipefail
 
 ## declare functions
-. ./scripts/get_environment_vars.sh
+. .compoze/scripts/get_environment_vars.sh
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_DIR="$SCRIPT_DIR/.."
+PROJECT_DIR="$SCRIPT_DIR/../.."
 
 APP_NAME=$1
 ENV=$2

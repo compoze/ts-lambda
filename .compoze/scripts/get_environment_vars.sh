@@ -2,7 +2,7 @@
 
 set -eo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-PROJECT_DIR="$SCRIPT_DIR/.."
+PROJECT_DIR="$SCRIPT_DIR/../.."
 ENVIRONMENTS_DIR="${PROJECT_DIR}/environments"
 
 get_environment_vars() {
