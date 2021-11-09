@@ -2,10 +2,6 @@
   "name": "myapp",
   "version": "1.0.0",
   "description": "myapp API",
-  "main": "app.js",
-  "repository": "https://github.com/awslabs/aws-sam-cli/tree/develop/samcli/local/init/templates/cookiecutter-aws-sam-hello-nodejs",
-  "author": "SAM CLI",
-  "license": "MIT",
   "config": {
     "projectName": "myapp"
   },
