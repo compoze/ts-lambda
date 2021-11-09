@@ -17,19 +17,20 @@
     "compoze:sqswriter": "compoze lambda.writer -t sqs",
     "compoze:eventbridge": "compoze lambda.eventbridge.listener",
     "compoze:eventbridgewriter": "compoze lambda.eventbus.writer",
+    "compoze:eventbridgecronwriter": "compoze lambda.eventbus.cron",
     "compoze:dynamo": "compoze lambda.dynamodb",
     "compoze:environment": "compoze environment",
     "deploy": ".compoze/scripts/deploy.sh $npm_package_config_projectName",
     "test": "jest --config=jest.config.js",
     "postbuild": "echo \"moving node_modules to deploy\" && cp -r node_modules deploy",
-    "preinitialize": "npm i",
-    "precompoze:sqs": "npm i",
+    "precompoze:sqs": "npm ci",
     "precompoze:environment": "npm ci",
-    "precompoze:http": "npm i",
-    "precompoze:sqswriter": "npm i",
-    "precompoze:eventbridge": "npm i",
-    "precompoze:eventbridgewriter": "npm i",
-    "precompoze:dynamo": "npm i"
+    "precompoze:http": "npm ci",
+    "precompoze:sqswriter": "npm ci",
+    "precompoze:eventbridge": "npm ci",
+    "precompoze:eventbridgewriter": "npm ci",
+    "precompoze:eventbridgecronwriter": "npm ci",
+    "precompoze:dynamo": "npm ci"
   },
   "dependencies": {
     "@aws-sdk/client-cloudwatch": "^3.29.0",
@@ -37,7 +38,7 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@compoze/compoze-framework": "^0.16.2",
+    "@compoze/compoze-framework": "^0.16.3",
     "@types/aws-lambda": "^8.10.70",
     "@types/jest": "^27.0.2",
     "@types/node": "^14.14.20",
