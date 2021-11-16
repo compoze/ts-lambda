@@ -17,6 +17,7 @@
     "compoze:dynamo": "compoze lambda.dynamodb",
     "compoze:environment": "compoze environment",
     "deploy": ".compoze/scripts/deploy.sh $npm_package_config_projectName",
+    "start:local": "sam local start-api",
     "test": "jest --config=jest.config.js",
     "postbuild": "echo \"moving node_modules to deploy\" && cp -r node_modules deploy",
     "precompoze:sqs": "npm ci",
@@ -34,7 +35,7 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@compoze/compoze-framework": "^0.16.14",
+    "@compoze/compoze-framework": "^0.16.15",
     "@types/aws-lambda": "^8.10.70",
     "@types/jest": "^27.0.2",
     "@types/node": "^14.14.20",
