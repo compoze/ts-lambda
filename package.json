@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "myapp API",
   "config": {
-    "projectName": "myapp"
+    "projectName": "myapp",
+    "region": "REGION_REPLACEMENT"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
@@ -16,7 +17,7 @@
     "compoze:eventbridgecronwriter": "compoze lambda.eventbus.cron",
     "compoze:dynamo": "compoze lambda.dynamodb",
     "compoze:environment": "compoze environment",
-    "deploy": ".compoze/scripts/deploy.sh $npm_package_config_projectName",
+    "deploy": ".compoze/scripts/deploy.sh $npm_package_config_projectName $npm_package_config_region",
     "start:local": "sam local start-api",
     "test": "jest --config=jest.config.js",
     "postbuild": "echo \"moving node_modules to deploy\" && cp -r node_modules deploy",
