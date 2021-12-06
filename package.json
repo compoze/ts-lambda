@@ -38,7 +38,7 @@
     "winston": "^3.3.3"
   },
   "devDependencies": {
-    "@compoze/compoze-framework": "^0.17.4",
+    "@compoze/compoze-framework": "^0.17.5",
     "@types/aws-lambda": "^8.10.70",
     "@types/jest": "^27.0.2",
     "@types/node": "^14.14.20",
