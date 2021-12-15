@@ -17,6 +17,7 @@ Resources:
   ApiGateway:
     Type: 'AWS::Serverless::Api'
     Properties:
+      OpenApiVersion: 3.0.3
       Name: !Sub '${AWS::StackName}'
       StageName: !Sub '${Environment}'
       Auth:
