@@ -19,7 +19,7 @@ Resources:
     Properties:
       OpenApiVersion: 3.0.3
       Name: !Sub '${AWS::StackName}'
-      StageName: !Sub '${Environment}'
+      StageName: !Ref Environment
       Auth:
         UsagePlan:
           CreateUsagePlan: PER_API
