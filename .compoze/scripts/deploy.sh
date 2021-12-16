@@ -10,7 +10,8 @@ PROJECT_DIR="$SCRIPT_DIR/../.."
 
 APP_NAME=$1
 REGION=$2
-ENV=$3
+DEPLOYMENT_BUCKET=$3
+ENV=$4
 
 npm ci
 npm run build
@@ -20,11 +21,11 @@ chmod -R 744 deploy
 
 get_environment_vars $ENV
 
-echo $environments 
+echo $environments
 sam deploy --stack-name ${APP_NAME}-${ENV} \
-    --template "${PROJECT_DIR}/template.yaml" \
-    --s3-bucket <compoze-deploy-bucket> \
-    --capabilities CAPABILITY_IAM \
-    --no-fail-on-empty-changeset \
-    --region ${REGION} \
-    --parameter-overrides "$environments"
+--template "${PROJECT_DIR}/template.yaml" \
+--s3-bucket "${DEPLOYMENT_BUCKET}" \
+--capabilities CAPABILITY_IAM \
+--no-fail-on-empty-changeset \
+--region ${REGION} \
+--parameter-overrides "$environments"
