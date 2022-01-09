@@ -50,6 +50,9 @@ Resources:
             Method: get
             RestApiId:
               Ref: ApiGateway
+        Tags:
+          Compoze:Source: Compoze
+          Compoze:App: myapp
 Outputs:
   myappUrl:
     Description: 'API Gateway endpoint URL for function'
