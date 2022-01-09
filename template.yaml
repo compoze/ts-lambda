@@ -53,6 +53,7 @@ Resources:
       Tags:
         Compoze:Source: Compoze
         Compoze:Component: myappFunction
+        Compoze:Environment: !Ref Environment
 Outputs:
   myappUrl:
     Description: 'API Gateway endpoint URL for function'
