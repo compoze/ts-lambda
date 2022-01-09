@@ -1,6 +1,5 @@
 {
   "name": "myapp",
-  "version": "1.0.0",
   "description": "myapp API",
   "config": {
     "projectName": "myapp",
