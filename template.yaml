@@ -52,7 +52,7 @@ Resources:
               Ref: ApiGateway
       Tags:
         Compoze:Source: Compoze
-        Compoze:App: myappFunction
+        Compoze:Component: myappFunction
 Outputs:
   myappUrl:
     Description: 'API Gateway endpoint URL for function'
