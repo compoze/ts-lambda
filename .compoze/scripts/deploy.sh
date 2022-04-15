@@ -12,6 +12,7 @@ APP_NAME=$1
 REGION=$2
 DEPLOYMENT_BUCKET=$3
 ENV=$4
+ROLE_ARN=$5
 
 npm ci
 npm run build
@@ -22,6 +23,11 @@ chmod -R 744 deploy
 get_environment_vars $ENV
 
 echo $environments
+
+echo 'assuming role for deployment'
+
+aws sts assume-role --role-arn $ROLE_ARN
+
 sam deploy --stack-name ${APP_NAME}-${ENV} \
 --template "${PROJECT_DIR}/template.yaml" \
 --s3-bucket "${DEPLOYMENT_BUCKET}" \
