@@ -4,13 +4,12 @@
     "config": {
         "projectName": "myapp",
         "deploymentBucket": "<compoze-deploy-bucket>",
-        "region": "REGION_REPLACEMENT",
-        "deploymentRoleArn": "DEPLOYMENT_ROLE_REPLACEMENT"
+        "region": "REGION_REPLACEMENT"
     },
     "scripts": {
         "build": "tsc -p tsconfig.build.json",
         "clean": "rm -rf node_modules",
-        "deploy": ".compoze/scripts/deploy.sh $npm_package_config_projectName $npm_package_config_region $npm_package_config_deploymentBucket $npm_package_config_deploymentRoleArn",
+        "deploy": ".compoze/scripts/deploy.sh $npm_package_config_projectName $npm_package_config_region $npm_package_config_deploymentBucket",
         "start:local": "sam local start-api",
         "test": "jest --config=jest.config.js",
         "postbuild": "echo \"moving node_modules to deploy\" && cp -r node_modules deploy"

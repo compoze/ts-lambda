@@ -24,10 +24,6 @@ get_environment_vars $ENV
 
 echo $environments
 
-echo 'assuming role for deployment'
-
-aws sts assume-role --role-arn $ROLE_ARN
-
 sam deploy --stack-name ${APP_NAME}-${ENV} \
 --template "${PROJECT_DIR}/template.yaml" \
 --s3-bucket "${DEPLOYMENT_BUCKET}" \
