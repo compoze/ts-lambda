@@ -12,7 +12,6 @@ APP_NAME=$1
 REGION=$2
 DEPLOYMENT_BUCKET=$3
 ENV=$4
-ROLE_ARN=$5
 
 npm ci
 npm run build
