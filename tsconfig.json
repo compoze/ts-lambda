@@ -6,6 +6,7 @@
     "sourceMap": true,
     "noImplicitAny": true,
     "preserveConstEnums": true,
-    "allowSyntheticDefaultImports": true
+    "allowSyntheticDefaultImports": true,
+    "strictNullChecks": true
   }
 }

@@ -17,7 +17,7 @@ export abstract class MetricPublisher {
     constructor(metricName: string, namespace: string) {
         this.metricName = metricName;
         this.namespace = namespace;
-        this.environment = process.env.NODE_ENV;
+        this.environment = process.env.NODE_ENV ?? "local";
         this.client = new CloudWatchClient({ region: "us-east-1" });
 
     }
