@@ -9,8 +9,8 @@ get_environment_vars() {
     ENV=$1
     echo "getting environments for $ENV"
     environments=""
-    while read p; do
-        environments+="$p "
+    while read -r line || [ -n "$line" ]; do
+        environments+="$line "
     done <"${ENVIRONMENTS_DIR}/${ENV}.env"
 
 }
