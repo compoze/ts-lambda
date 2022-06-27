@@ -12,8 +12,8 @@
         "deploy": ".compoze/scripts/deploy.sh $npm_package_config_projectName $npm_package_config_region $npm_package_config_deploymentBucket",
         "start:local": "sam local start-api",
         "test": "jest --config=jest.config.js",
-        "lint": "npx eslint .",
-        "lint-fix": "npx eslint . --fix",
+        "lint": "npx eslint \"src/**\" \"__tests__/**\"",
+        "lint-fix": "npx eslint \"src/**\" \"__tests__/**\" --fix",
         "postbuild": "echo \"moving node_modules to deploy\" && cp -r node_modules deploy"
     },
     "dependencies": {
