@@ -14,7 +14,7 @@ describe('Tests index', function () {
 
         expect(result.statusCode).toBe(200);
 
-        let response = JSON.parse(result.body);
+        const response = JSON.parse(result.body);
 
         expect(response.message).toBe("hello world");
     });
